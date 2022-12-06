@@ -4,6 +4,7 @@
 // @version        0.0.1
 // ==/UserScript==
 const FOUR_MINUTES = 4 * 60 * 1000;
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms || 3000));
 
 Element.prototype.isVisible = function() {
     return !!(this.offsetWidth||this.offsetHeight||this.getClientRects().length);
